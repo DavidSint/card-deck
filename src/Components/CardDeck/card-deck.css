@@ -1,0 +1,78 @@
+main {
+  display: flex;
+}
+
+main > div {
+  width: 50%;
+}
+
+main > div:not(:last-child) {
+  border-right: 1px solid rgb(128, 128, 128);
+}
+
+main ol {
+  font-size: 100px;
+  line-height: 1.5;
+  margin: 0;
+  list-style: none;
+}
+
+main ol > li {
+  display: inline-block;
+}
+
+aside {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+input[type="number"] {
+  width: 40px;
+  height: 30px;
+  font-size: 16px;
+}
+
+#control-panel {
+  display: flex;
+  justify-content: space-around;
+}
+
+#draw-count-field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#draw-count-field-group > span > label {
+  margin-right: 10px;
+}
+
+@media (max-width: 1000px) {
+  main {
+    flex-direction: column;
+  }
+  main > div {
+    width: 100%;
+  }
+
+  main > div:not(:last-child) {
+    border-right: none;
+  }
+
+  #control-panel {
+    flex-wrap: wrap;
+  }
+}
+
+.black {
+  color: rgb(255, 255, 255);
+}
+
+@media (prefers-color-scheme: light) {
+  .black {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.red {
+  color: rgb(228, 85, 85);
+}
